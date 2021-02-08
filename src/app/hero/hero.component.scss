@@ -1,0 +1,43 @@
+@import "../../assets/styles/variables/sizes";
+@import "../../assets/styles/variables/gaps";
+
+.hero {
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 40%), rgb(255 255 255 / 0%)),
+  url("/assets/images/pope.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: $header-height;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "container"
+                       "bar";
+  margin-bottom: $gap-medium;
+
+  &__container {
+    max-width: $content-width;
+    margin: 0 auto;
+    grid-area: container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "primarynav primarynav"
+    "opinion .";
+  }
+
+  &__links {
+    grid-area: primarynav;
+    align-self: start;
+  }
+
+  &__opinion {
+    grid-area: opinion;
+    align-self: center;
+  }
+
+  &__bar {
+    grid-area: bar;
+    align-self: end;
+  }
+}

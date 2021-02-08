@@ -1,1 +1,15 @@
-<p>main-content works!</p>
+<div class="main-content">
+  <app-notification></app-notification>
+  <h2 class="main-content__title">Previous Rulings</h2>
+  <div class="main-content__previous-rulings">
+    <app-voting-card
+      *ngFor="let item of data"
+      [image]="item.image"
+      [name]="item.name"
+      [date]="item.date"
+      [section]="item.section"
+      [description]="item.description"
+      (clickThumb)="onClickThumb($event)"
+    ></app-voting-card>
+  </div>
+</div>

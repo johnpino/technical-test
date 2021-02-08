@@ -7,3 +7,11 @@ $thumb-item-height: 80px;
 
 //Closing bar
 $closing-bar-height: 50px;
+
+//Voting card
+$voting-card-height: 550px;
+$voting-card-icon-height: 30px;
+$voting-card-gap: 5px;
+$voting-card-button-height: $voting-card-icon-height * 1.5;
+$voting-card-padding: $voting-card-icon-height + $voting-card-gap;
+$voting-card-progress-bar-height: 50px;

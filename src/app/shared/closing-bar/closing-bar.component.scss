@@ -1,0 +1,45 @@
+@import "../../../assets/styles/variables/colors";
+@import "../../../assets/styles/variables/gaps";
+@import "../../../assets/styles/variables/typography";
+@import "../../../assets/styles/variables/sizes";
+
+.closing-bar {
+  display: flex;
+
+  &__label {
+    position: relative;
+    min-height: $closing-bar-height;
+    flex-basis: 30%;
+    text-align: right;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0 $gap-small;
+    background: linear-gradient(to left, rgb(0 0 0 / 40%), rgb(255 255 255 / 0%));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 10px;
+      border-color: transparent transparent transparent rgba(0 0 0 / 80%);
+    }
+  }
+
+  &__time {
+    min-height: $closing-bar-height;
+    flex-basis: 70%;
+    font-weight: 500;
+    font-size: $font-size-m;
+    padding: 0 $gap-small;
+    background-color: transparentize($white, .3);
+    display: flex;
+    align-items: center;
+  }
+}

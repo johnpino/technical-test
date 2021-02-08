@@ -1,0 +1,116 @@
+@import "../../../assets/styles/variables/colors";
+@import "../../../assets/styles/variables/sizes";
+@import "../../../assets/styles/variables/typography";
+@import "../../../assets/styles/variables/gaps";
+
+.voting-card {
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: $voting-card-height;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__container {
+    padding: $voting-card-padding;
+  }
+
+  &__name {
+    font-size: $font-size-m;
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+    left: -$voting-card-icon-height;
+
+    > * {
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: $voting-card-icon-height;
+      width: $voting-card-icon-height;
+      background-color: $gray;
+      position: relative;
+      left: -$voting-card-gap;
+    }
+  }
+
+  &__radio {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: $gap-small;
+    cursor: pointer;
+
+    [type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      + * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $voting-card-icon-height;
+        width: $voting-card-icon-height;
+
+      }
+
+      &:checked + * {
+        outline: 2px solid $white;
+      }
+    }
+
+    &--up {
+      background-color: $orange;
+    }
+
+    &--down {
+      background-color: $aquamarine;
+    }
+  }
+
+  &__button {
+    background-color: transparentize($black, .9);
+    border: 1px solid $white;
+    color: $white;
+    height: $voting-card-button-height;
+    padding: 0 $gap;
+    cursor: pointer;
+  }
+
+  &__progress-bar {
+    display: flex;
+    height: $voting-card-progress-bar-height;
+    font-size: $font-size-m;
+    font-weight: 300;
+    width: 100%;
+
+    &--up {
+      display: flex;
+      align-items: center;
+      padding: 0 $gap-small;
+      background-color: transparentize($orange, 0.3);
+
+      > * {
+        margin-right: $gap-small;
+      }
+    }
+
+    &--down {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 $gap-small;
+      background-color: transparentize($aquamarine, 0.3);
+
+      > * {
+        margin-left: $gap-small;
+      }
+    }
+  }
+}

@@ -1,1 +1,13 @@
-<p>hero works!</p>
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__links">
+      <app-primary-navigation *ngIf="displayPrimaryNavigation"></app-primary-navigation>
+    </div>
+    <div class="hero__opinion">
+      <app-opinion-card></app-opinion-card>
+    </div>
+  </div>
+  <div class="hero__bar">
+    <app-closing-bar></app-closing-bar>
+  </div>
+</div>

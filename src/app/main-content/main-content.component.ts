@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StoreService } from "../services/store.service";
 
 @Component({
   selector: 'app-main-content',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
-  constructor() { }
+  data: {};
+
+  constructor(private storeService: StoreService) {
+    this.data = storeService.data;
+  }
 
   ngOnInit(): void {
+    console.log(this.data);
+  }
+
+  onClickThumb(e) {
+    console.log(e);
   }
 
 }
