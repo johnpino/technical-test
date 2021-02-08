@@ -4,6 +4,7 @@
   <div class="main-content__previous-rulings">
     <app-voting-card
       *ngFor="let person of data"
+      [id] = person.id
       [image]="person.image"
       [name]="person.name"
       [date]="person.date"

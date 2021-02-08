@@ -8,14 +8,14 @@
       {{description}}
     </p>
     <label class="voting-card__radio voting-card__radio--up">
-      <input type="radio" name="thumb">
+      <input type="radio" name="thumb" value="up" (change)="onClickRadio($event)">
       <fa-icon [icon]="faThumbsUp"></fa-icon>
     </label>
     <label class="voting-card__radio voting-card__radio--down">
-      <input type="radio" name="thumb">
+      <input type="radio" name="thumb" value="down" (change)="onClickRadio($event)">
       <fa-icon [icon]="faThumbsDown"></fa-icon>
     </label>
-    <button class="voting-card__button" (click)="onClickThumb()">Vote now</button>
+    <button class="voting-card__button" (click)="onClickVote()">Vote now</button>
   </div>
   <div class="voting-card__progress-bar">
     <div class="voting-card__progress-bar--up" [ngStyle]="{'flex-basis': percents.up}">

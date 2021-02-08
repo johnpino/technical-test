@@ -15,11 +15,20 @@ export class MainContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.data);
   }
 
-  onClickThumb(e) {
-    console.log(e);
+  onClickThumb(event) {
+    let person;
+    switch(event.selectedRadioVote) {
+      case 'up':
+        person = this.storeService.data.find( person => person.id === event.id ).voteUp();
+        break;
+      case 'down':
+        person = this.storeService.data.find( person => person.id === event.id ).voteDown();
+        break;
+    }
+
+    //console.log(event);
   }
 
 }

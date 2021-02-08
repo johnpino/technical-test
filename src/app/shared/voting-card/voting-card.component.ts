@@ -11,6 +11,7 @@ export class VotingCardComponent implements OnInit {
   faThumbsDown = faThumbsDown;
   faThumbsUp = faThumbsUp;
 
+  @Input() id: number;
   @Input() image: string;
   @Input() name: string;
   @Input() date: string;
@@ -19,6 +20,7 @@ export class VotingCardComponent implements OnInit {
   @Input() percents: {up: string, down: string};
   winningColor: string;
   winningIcon;
+  selectedRadioVote: string;
 
   @Output() clickThumb: any = new EventEmitter<any>();
 
@@ -29,8 +31,12 @@ export class VotingCardComponent implements OnInit {
     this.winningIcon = this.percents.up > this.percents.down ? faThumbsUp : faThumbsDown;
   }
 
-  onClickThumb() {
-    this.clickThumb.emit("click");
+  onClickRadio(e) {
+    this.selectedRadioVote = e.target.value;
+  }
+
+  onClickVote() {
+    this.clickThumb.emit({id: this.id, selectedRadioVote: this.selectedRadioVote});
   }
 
 }

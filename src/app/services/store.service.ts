@@ -8,6 +8,7 @@ export class StoreService {
 
   data: Person[] = [
     new Person(
+      1,
       'kanye.jpg',
       'Kanye West',
       '1 month ago',
@@ -17,6 +18,7 @@ export class StoreService {
       36
     ),
     new Person(
+      2,
       'Mark.jpg',
       'Mark Zuckerberg',
       '1 month ago',
@@ -26,6 +28,7 @@ export class StoreService {
       64
     ),
     new Person(
+      3,
       'Cristina.jpg',
       'Cristina Fernández de Kirchner',
       '1 month ago',
@@ -35,6 +38,7 @@ export class StoreService {
       64
     ),
     new Person(
+      4,
       'Malala.jpg',
       'Malala Yousafzai',
       '1 month ago',
