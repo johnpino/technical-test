@@ -1,0 +1,33 @@
+//Import Vars
+@import "../../../assets/styles/variables/colors";
+@import "../../../assets/styles/variables/sizes";
+@import "../../../assets/styles/variables/typography";
+@import "../../../assets/styles/variables/gaps";
+
+.primary-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logo links";
+  align-items: center;
+  min-height: $primary-navigation-height;
+  color: $white;
+
+  &__logo {
+    grid-area: logo;
+    font-size: $logo-size;
+  }
+
+  &__links {
+    grid-area: links;
+    text-align: right;
+  }
+
+  &__link-item {
+    display: inline-block;
+    margin-left: $gap-medium;
+    color: $white;
+    text-decoration: none;
+
+  }
+}

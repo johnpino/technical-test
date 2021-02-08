@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+//Import third-party assets
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+p, span, a {
+  font-weight: 300;
+}

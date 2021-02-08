@@ -1,0 +1,59 @@
+@import "../../../assets/styles/variables/colors";
+@import "../../../assets/styles/variables/gaps";
+@import "../../../assets/styles/variables/typography";
+@import "../../../assets/styles/variables/sizes";
+
+.opinion-card {
+  background: rgba(100,100,100,.5);
+  color: $white;
+
+  &__information {
+    padding: $gap-medium;
+    backdrop-filter: blur(71px);
+  }
+
+  &__name {
+    font-size: $font-size-l;
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: $font-size-p-highlight;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: $gap-medium;
+    color: $white;
+  }
+
+  &__label {
+    &--bold {
+      font-weight: 400;
+      font-size: $font-size-p-highlight;
+    }
+  }
+
+  &__thumbs {
+    display: flex;
+  }
+
+  &__thumb-item {
+    flex: 0 1 50%;
+    min-height: $thumb-item-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $gap;
+    cursor: pointer;
+
+    &--up {
+      background-color: transparentize($aquamarine, .2);
+    }
+
+    &--down {
+      background-color: transparentize($orange, .2);
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-primary-navigation',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./primary-navigation.component.scss']
 })
 export class PrimaryNavigationComponent implements OnInit {
+
+  faSearch = faSearch;
 
   constructor() { }
 

@@ -10,6 +10,8 @@ import { HightlightPanelComponent } from './shared/hightlight-panel/hightlight-p
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { OpinionCardComponent } from './shared/opinion-card/opinion-card.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { MainContentComponent } from './main-content/main-content.component';
     HightlightPanelComponent,
     FooterComponent,
     HeaderComponent,
-    MainContentComponent
+    MainContentComponent,
+    OpinionCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
