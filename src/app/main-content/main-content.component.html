@@ -3,12 +3,13 @@
   <h2 class="main-content__title">Previous Rulings</h2>
   <div class="main-content__previous-rulings">
     <app-voting-card
-      *ngFor="let item of data"
-      [image]="item.image"
-      [name]="item.name"
-      [date]="item.date"
-      [section]="item.section"
-      [description]="item.description"
+      *ngFor="let person of data"
+      [image]="person.image"
+      [name]="person.name"
+      [date]="person.date"
+      [section]="person.section"
+      [description]="person.description"
+      [percents]="person.calculatePercents()"
       (clickThumb)="onClickThumb($event)"
     ></app-voting-card>
   </div>

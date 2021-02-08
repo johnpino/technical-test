@@ -1,7 +1,7 @@
 <div class="voting-card" [ngStyle]="{'background-image': 'linear-gradient(to top, rgb(0 0 0 / 40%), rgb(255 255 255 / 0%)), url(/assets/images/' + image + ')'}">
   <div class="voting-card__container">
     <h3 class="voting-card__name">
-      <fa-icon [icon]="faThumbsUp" size="1x" [ngStyle]="{'background-color': 'red'}"></fa-icon>{{name}}
+      <fa-icon [icon]="winningIcon" size="1x" [className]="winningColor"></fa-icon>{{name}}
     </h3>
     <span class="voting-card__label">{{date}} in {{section}}</span>
     <p class="voting-card__description">
@@ -18,11 +18,11 @@
     <button class="voting-card__button" (click)="onClickThumb()">Vote now</button>
   </div>
   <div class="voting-card__progress-bar">
-    <div class="voting-card__progress-bar--up" [ngStyle]="{'flex-basis': '64%'}">
-      <fa-icon [icon]="faThumbsUp"></fa-icon> 64%
+    <div class="voting-card__progress-bar--up" [ngStyle]="{'flex-basis': percents.up}">
+      <fa-icon [icon]="faThumbsUp"></fa-icon> {{ percents.up }}
     </div>
-    <div class="voting-card__progress-bar--down" [ngStyle]="{'flex-basis': '36%'}">
-      36% <fa-icon [icon]="faThumbsDown"></fa-icon>
+    <div class="voting-card__progress-bar--down" [ngStyle]="{'flex-basis': percents.down}">
+      {{ percents.down }} <fa-icon [icon]="faThumbsDown"></fa-icon>
     </div>
   </div>
 </div>

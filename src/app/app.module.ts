@@ -13,6 +13,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { OpinionCardComponent } from './shared/opinion-card/opinion-card.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { ClosingBarComponent } from './shared/closing-bar/closing-bar.component';
+import { Person } from './person/person.model';
 
 @NgModule({
   declarations: [
