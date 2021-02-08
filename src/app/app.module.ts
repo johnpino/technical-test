@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { OpinionCardComponent } from './shared/opinion-card/opinion-card.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { ClosingBarComponent } from './shared/closing-bar/closing-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     FooterComponent,
     HeaderComponent,
     MainContentComponent,
-    OpinionCardComponent
+    OpinionCardComponent,
+    ClosingBarComponent
   ],
   imports: [
     BrowserModule,
